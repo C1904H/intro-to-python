@@ -8,14 +8,14 @@ Reflection Questions
 If you were hired to work on backend programming for a web application, what kinds of operations would you be working on?
 
 - In simple terms frontend is what the user sees and interacts with on screen, whilst backend web development works on the server-side, making websites and applications run, ensuring functionality and performance.
-Backend programming involves working on opearations such as database creation and management (eg SQL queries), creating APIs, security (authorization and authentication) and version control system (Git).
+Backend programming involves working on operations such as database creation and management (eg SQL queries), creating APIs, security (authorization and authentication) and version control system (Git).
 
 
 2. Imagine you’re working as a full-stack developer in the near future. Your team is asking for your advice on whether to use JavaScript or Python for a project, and you think Python would be the better choice. How would you explain the similarities and differences between the two languages to your team? Drawing from what you learned in this Exercise, what reasons would you give to convince your team that Python is the better option? 
 
-- I would explain to my team that JavaScript and Python are both high-level scriptin languages, where commands are executed line by line via standardized syntax. In addition they both use dynamic typing which allow variables to assume any kind of value without producing errors, ie you don't have to declare a variable explicity before it's used. Python has extra benefits such as:
+- I would explain to my team that JavaScript and Python are both high-level scripting languages, where commands are executed line by line via standardized syntax. In addition they both use dynamic typing which allow variables to assume any kind of value without producing errors, ie you don't have to declare a variable explicitly before it's used. Python has extra benefits such as:
     - a large number of open-source and propriety packages to suit whatever you're working on, thereby simplifying elaborate operations into condensed functions (eg password encryption, datetime and JSON formatting), 
-    - pre-installed common web operations to allow quicker application development (eg URL routing, form handling and validation, template engins, database connections),
+    - pre-installed common web operations to allow quicker application development (eg URL routing, form handling and validation, template engines, database connections),
     - error resistant code due to it's hugely interactive shell and it's readability, making understanding documentation and performing debugging simpler,
     - it's large community support, helping to share queries, uncertainties and possibly potential upgrades for future releases.
 
