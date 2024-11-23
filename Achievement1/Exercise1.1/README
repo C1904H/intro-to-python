@@ -9,4 +9,4 @@
 - add.py file that calculates the sum of two numbers
 - 2 virtual environments set up:`cf-python-base` and `cf-python-copy`
 - Exported requirements.txt file to list package requirements for Python app
-- Screenshots of installing Python, creating new virtual enviroment and installing ipython to enviroment
+- Screenshots of installing Python, creating new virtual environment and installing ipython to environment
