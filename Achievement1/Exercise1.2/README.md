@@ -1,4 +1,4 @@
-# Exercise 2: Data Types in Python
+# Exercise 1.2: Data Types in Python
 
 ## Tasks
 - Use data types and methods to execute Python commands that store recipes containing their
