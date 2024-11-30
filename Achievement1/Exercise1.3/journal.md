@@ -12,16 +12,16 @@
 destination = input(‘Where would you like to travel to?’)
 
 if destination == ‘Thailand’:
-    Print (‘Enjoy your stay in Thailand!’)
+    print (‘Enjoy your stay in Thailand!’)
 
 elif destination == ‘Italy’:
-    Print (‘Enjoy your stay in Italy!’)
+    print (‘Enjoy your stay in Italy!’)
 
 elif destination == ‘Australia’:
-    Print (‘Enjoy your stay in Australia!’) 
+    print (‘Enjoy your stay in Australia!’) 
 
 else:
-      print(‘Oops, that destination is not currently available.’)
+    print(‘Oops, that destination is not currently available.’)
 ```
 **2. Imagine you’re at a job interview for a Python developer role. The interviewer says “Explain logical operators in Python”. Draft how you would respond.**
 
