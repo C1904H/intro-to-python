@@ -4,7 +4,7 @@ import pickle
 def take_recipe():
     name = input('Enter recipe name: ')
     cooking_time = int(input('Enter cooking time (mins): '))
-    ingredients =  set(input('Enter ingredients: ').split(', '))
+    ingredients =  list(input('Enter ingredients: ').split(', '))
     recipe = {
       'name': name, 
       'cooking_time': cooking_time, 
