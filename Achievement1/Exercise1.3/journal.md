@@ -8,7 +8,7 @@
 **The user’s input should be checked for 3 different travel destinations that you define.**
 **If the user’s input is one of those 3 destinations, the following statement should be printed: “Enjoy your stay in ______!”**
 **If the user’s input is something other than the defined destinations, the following statement should be printed: “Oops, that destination is not currently available.**
-```
+```python
 destination = input(‘Where would you like to travel to?’)
 
 if destination == ‘Thailand’:

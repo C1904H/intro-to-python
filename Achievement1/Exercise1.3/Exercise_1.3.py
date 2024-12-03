@@ -1,12 +1,12 @@
 # empty lists
 recipes_list = []
-ingredients_list = []
+ingredients_list = set()
 
 # take_recipe function for user input
 def take_recipe():
-    name = str(input('Recipe name: '))
+    name = input('Recipe name: ')
     cooking_time = int(input('Cooking time (mins): '))
-    ingredients =  list(input('Ingredients (please separate each ingredient with comma): ').split(', '))
+    ingredients =  list(input('Ingredients: ').split(', '))
     recipe = {
       'name': name, 
       'cooking_time': cooking_time, 
@@ -23,8 +23,7 @@ for i in range(n):
 
     # check if ingredient to be added to ingredient list
     for ingredient in recipe['ingredients']:
-      if not ingredient in ingredients_list:
-        ingredients_list.append(ingredient)
+      ingredients_list.add(ingredient)
 
     recipes_list.append(recipe)
 
@@ -55,8 +54,8 @@ for recipe in recipes_list:
 def all_ingredients():
   print('Ingredients Available Across All Recipes')
   print('========================================')
-  ingredients_list.sort()
-  for ingredient in ingredients_list:
+  new_ingredients_list_sorted = sorted(ingredients_list)
+  for ingredient in new_ingredients_list_sorted:
     print(ingredient)
 
 all_ingredients()
