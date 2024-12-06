@@ -9,27 +9,34 @@ def take_recipe():
       'name': name, 
       'cooking_time': cooking_time, 
       'ingredients': ingredients,
-      'difficulty': ""
     }
-    # calculate recipe diffulty
-    def calc_difficulty():
-        if recipe['cooking_time'] < 10 and len(recipe['ingredients']) < 4:
-            recipe['difficulty'] = 'Easy'
-
-        elif recipe['cooking_time'] < 10 and len(recipe['ingredients']) >= 4:
-            recipe['difficulty'] = 'Medium'
-
-        elif recipe['cooking_time'] >= 10 and len(recipe['ingredients']) < 4:
-            recipe['difficulty'] = 'Intermediate'
-
-        elif recipe['cooking_time'] >= 10 and len(recipe['ingredients']) >= 4:
-            recipe['difficulty'] = 'Hard'
-    calc_difficulty()
+    # Add difficulty level to recipe dictionary
+    recipe['difficulty'] = calc_difficulty(recipe)
 
     return recipe
 
+# calculate recipe diffulty
+def calc_difficulty(recipe):
+      if recipe['cooking_time'] < 10 and len(recipe['ingredients']) < 4:
+          # recipe['difficulty'] = 'Easy'
+          Difficulty = 'Easy'
+
+      elif recipe['cooking_time'] < 10 and len(recipe['ingredients']) >= 4:
+          # recipe['difficulty'] = 'Medium'
+          Difficulty = 'Medium'
+
+      elif recipe['cooking_time'] >= 10 and len(recipe['ingredients']) < 4:
+          # recipe['difficulty'] = 'Intermediate'
+          Difficulty = 'Intermediate'
+
+      elif recipe['cooking_time'] >= 10 and len(recipe['ingredients']) >= 4:
+          # recipe['difficulty'] = 'Hard'
+          Difficulty = 'Hard'
+# calc_difficulty()
+      return Difficulty
+
 # Prompt to open user defined filename
-filename = input("Enter filename of your stored recipes: ") + '.bin'
+filename = input("Enter filename of your stored recipes (without extension): ") + '.bin'
 
 # Loads file if exists
 try:
@@ -84,8 +91,7 @@ data = {
 }
 
 # Opens user defined filename and writes data to it using pickle method
-updated_file = open(filename, 'wb')
-pickle.dump(data, updated_file)
+with open(filename, 'wb') as updated_file:  #with statement to ensure file closed after black is executed.
+  pickle.dump(data, updated_file)
 
-updated_file.close()
 print('Recipes updated, goodbye.')

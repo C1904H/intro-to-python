@@ -37,7 +37,7 @@ def search_ingredient(data):
                 display_recipe(recipe)
 
 # Opens and loads user inputted filename
-filename = input("Enter filename where you've stored your recipes: ") + '.bin'
+filename = input("Enter filename where you've stored your recipes (without extension): ") + '.bin'
         
 try:
     file = open(filename, 'rb')
