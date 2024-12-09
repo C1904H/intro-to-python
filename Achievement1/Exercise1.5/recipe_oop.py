@@ -5,7 +5,7 @@ class Recipe(object):
   def __init__(self, name, cooking_time):
     self.name = name
     self.cooking_time = cooking_time
-    self.ingredients = []
+    self.ingredients = set()
     self.difficulty = None
   
   # Getter method for name
@@ -24,24 +24,28 @@ class Recipe(object):
 
   # Method to add ingredients
   def add_ingredients(self, *args):
-    for ingredient in args:
-      if ingredient not in self.ingredients:
-        self.ingredients.append(ingredient)
+    # for ingredient in args:
+    #   if ingredient not in self.ingredients:
+    #     self.ingredients.append(ingredient)
+    self.ingredients.update(args)
     self.update_all_ingredients()
   # Getter method for ingredients    
   def get_ingredients(self):
-    return self.ingredients
+    return sorted(self.ingredients)
   
   # Method to calculate recipe difficulty
   def calculate_difficulty(self):
-        if self.cooking_time < 10 and len(self.ingredients) < 4:
+        ingredient_len = len(self.ingredients)
+
+        if self.cooking_time < 10 and ingredient_len < 4:
             self.difficulty = 'Easy'
-        elif self.cooking_time < 10 and len(self.ingredients) >= 4:
+        elif self.cooking_time < 10 and ingredient_len >= 4:
             self.difficulty = 'Medium'
-        elif self.cooking_time >= 10 and len(self.ingredients) < 4:
+        elif self.cooking_time >= 10 and ingredient_len < 4:
             self.difficulty = 'Intermediate'
-        elif self.cooking_time >= 10 and len(self.ingredients) >= 4:
+        elif self.cooking_time >= 10 and ingredient_len >= 4:
             self.difficulty = 'Hard'
+
   # Getter method for recipe difficulty
   def get_difficulty(self):
      if self.difficulty is None: 
@@ -54,8 +58,7 @@ class Recipe(object):
   
   # Method to update all_ingredients set
   def update_all_ingredients(self):
-     for ingredient in self.ingredients:
-        Recipe.all_ingredients.add(ingredient)
+      Recipe.all_ingredients.update(self.ingredients)
 
   # String representation to print entire recipe
   def __str__(self):
@@ -63,19 +66,18 @@ class Recipe(object):
      return (
             f"Recipe Name: {self.name}\n"
             f"Cooking Time: {self.cooking_time} mins\n"
-            f"Ingredients: {', '.join(self.ingredients)}\n"
+            f"Ingredients: {', '.join(sorted(self.ingredients))}\n"
             f"Difficulty: {self.difficulty}\n"
      )
 
 # Function for searching recipes by specified ingredient
 def recipe_search(data, search_term):
     print(f"Searching for recipes with {search_term}...")
-    found = False
     for recipe in data:
         if recipe.search_ingredient(search_term):
             print(recipe)
-            found = True
-    if not found:
+            break
+    else:
         print(f"No recipes found with {search_term}.")
 
 # Recipe inputs  
