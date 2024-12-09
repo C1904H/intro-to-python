@@ -24,9 +24,6 @@ class Recipe(object):
 
   # Method to add ingredients
   def add_ingredients(self, *args):
-    # for ingredient in args:
-    #   if ingredient not in self.ingredients:
-    #     self.ingredients.append(ingredient)
     self.ingredients.update(args)
     self.update_all_ingredients()
   # Getter method for ingredients    
