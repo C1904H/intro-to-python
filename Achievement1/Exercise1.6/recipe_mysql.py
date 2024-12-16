@@ -44,7 +44,6 @@ def create_recipe(conn, cursor):
   ingredients = set(
           ingredient.strip().capitalize() 
           for ingredient in ingredient_input.split(","))
-          # if ingredient.strip())
   ingredients_str = ", ".join(ingredients)
   
   # calculate difficulty
@@ -77,8 +76,6 @@ def search_recipe(conn, cursor):
 
     try:
         choice = int(input("Enter the number of the ingredient to search: "))
-        # if choice < 1 or choice > len(all_ingredients):
-        #   raise ValueError("Invalid input. Select valid number from list.")
         
         search_ingredient = all_ingredients[choice -1]
         
@@ -112,12 +109,10 @@ def update_recipe(conn, cursor):
 
     try:
         recipe_id = int(input("Enter the ID of the recipe to be updated: "))
-        # cursor.execute("SELECT id FROM Recipes WHERE id = %s", (recipe_id,))
         cursor.execute("SELECT * FROM Recipes WHERE id = %s", (recipe_id,))
         recipe_details = cursor.fetchone()
 
         if recipe_details is None:
-        # if cursor.fetchone() is None:
             raise ValueError(f"Recipe with ID {recipe_id} does not exist.")
 
         # Display current recipe details to the user
@@ -200,13 +195,9 @@ def delete_recipe(conn, cursor):
           recipe_id = int(input("Enter the ID of the recipe you want to delete: "))
           cursor.execute("DELETE FROM Recipes WHERE id = %s", (recipe_id,))
           # checks entered ID exists in database - returns error if not
-          # cursor.execute("SELECT id FROM Recipes WHERE id = %s", (recipe_id,))
-          # if cursor.fetchone() is None:
-          #     print(f"Error: Recipe does not exist.")
           if cursor.rowcount == 0:
             print("Error: Recipe does not exist.")
           else:
-            # cursor.execute("DELETE FROM Recipes WHERE id = %s", (recipe_id,))
               conn.commit()
               print("Recipe successfully deleted!")
 
