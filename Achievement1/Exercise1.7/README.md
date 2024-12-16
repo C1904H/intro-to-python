@@ -1,4 +1,4 @@
-# Exercise 1.6: Finalizing Your Python Program
+# Exercise 1.7: Finalizing Your Python Program
 
 ## Tasks
 - Use an Object Relational Mapper from SQLAlchemy to manage the contents of your database from your application.

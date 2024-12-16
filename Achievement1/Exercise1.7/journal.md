@@ -7,23 +7,23 @@
 Object Relational Mapper (ORM) makes database conversion easier, especially moving from one database management system (DBMS) to another. ORM converts the contents and structure of a database into classes and objects that can be interacted with directly, without having to use SQL syntax.  
 
 Key concepts of ORM include:
-Object-Orientated Paradigm
-Mapping
-CRUD operations
+- Object-Orientated Paradigm
+- Mapping
+- CRUD operations.
 
 Advantages of ORM include:
-Abstraction of database complexity as insulated developers from the complexity of SQL queries and database schema features.
-Portability of code through abstraction between the application and database. Developers can switch between various database systems with little code changes.
-Code reusability by classic way of relationship with databases, therefor easier to maintain and scale applications.
-Maintenance and scalability via ORM facilitated application maintenance via schema change and updates management.
+- Abstraction of database complexity as insulated developers from the complexity of SQL queries and database schema features.
+- Portability of code through abstraction between the application and database. Developers can switch between various database systems with little code changes.
+- Code reusability by classic way of relationship with databases, therefor easier to maintain and scale applications.
+- Maintenance and scalability via ORM facilitated application maintenance via schema change and updates management.
 
 As ORM simplifies the complexities of database interactions, it increases productivity, shortens development time and produces a neater and more maintainable code quality. 
 
 **2. By this point, you’ve finished creating your Recipe app. How did it go? What’s something in the app that you did well with? If you were to start over, what’s something about your app that you would change or improve?**
 
-I felt the last couple of exercises were quite demanding and took me a lot of time to develop and test properly.  I also had a few problems installing and running mySQLclient. 
+I felt the last couple of exercises were quite involvedg and took me more time to develop and test properly than anticipated.  I also had a few problems installing and running mySQLclient. 
 
-I thought I did well in developing the main menu user interface, and tried to make options clear to the user. I realised through the course of developing this app, that it’s important to have robust error handling in place and try to anticipate all the different variables a user may enter and to get the app to respond with the correct response and not crash the programme. 
+I enjoyed learning about mySQL and CRUD opeerations. I thought I did well in developing the main menu user interface, and tried to make options clear to the user. I realised through the course of developing this app, that it’s important to have robust error handling in place and try to anticipate all the different variables a user may enter and to get the app to respond with the correct response and not crash the programme. 
 
 **3. Imagine you’re at a job interview. You’re asked what experience you have creating an app using Python. Taking your work for this Achievement as an example, draft how you would respond to this question.**
 
