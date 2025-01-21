@@ -1,0 +1,5 @@
+# Choice of Django Deployment to Web Hosting Server
+
+For my application I choose to deploy it in Railway instead of Heroku.  Unfortunately the content in this module is very outdated and so when the time came to launch it on a web hosting server the version of Python used was no longer supported by Heroku.  After a very helpful discussion with my mentor it was decided to update my Python version and deploy my application on Railway.  
+
+Railway offers a free trial which would be enough to cover deployment and marking of my course deliverables.  It also offers out-of-the-box database hosting with easy set up for PostgreSQL and easy management of environment variables.  It's logging feature is very useful for debugging during deployment.  It's easy to deploy directly from my GitHub repository.  Overall this makes it much more streamline and so greatly speeds up deployment processes.  It's a newer platform but becoming much more popular with great community engagement and support. 
